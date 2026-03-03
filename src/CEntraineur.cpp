@@ -8,7 +8,7 @@
 CEntraineur::CEntraineur(const std::string &l_sDatasetPath)
     : g_genRandom(std::random_device{}()), g_distShuffle(0, 1000) {
   F_vChargerDataset(l_sDatasetPath);
-  g_iNbEpochs = 397; // fixe, indépendant du dataset
+  g_iNbEpochs = 500; // fixe, indépendant du dataset
   g_fTauxApprentissage = 0.01f;
   g_fLastMinLoss = 100.f;
 }

@@ -2058,5 +2058,29 @@
     {
         "chemin": "entrainement/chiffre_7_1772524332204.pgm",
         "label": 7
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772546236693.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772546241705.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772546255491.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_5_1772546266643.pgm",
+        "label": 5
+    },
+    {
+        "chemin": "entrainement/chiffre_3_1772546278319.pgm",
+        "label": 3
+    },
+    {
+        "chemin": "entrainement/chiffre_4_1772546292972.pgm",
+        "label": 4
     }
 ]
