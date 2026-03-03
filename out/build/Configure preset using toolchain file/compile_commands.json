@@ -1,0 +1,20 @@
+[
+{
+  "directory": "/home/enzo/Documents/c++/neuronal/out/build/Configure preset using toolchain file",
+  "command": "/usr/bin/c++ -I/home/enzo/Documents/c++/neuronal/include -isystem /usr/include/jsoncpp -g -Wall -Wextra -Wpedantic -fsanitize=address -std=c++20 -g -Wall -Wextra -Wpedantic -o CMakeFiles/Neuronal.dir/src/CModel.cpp.o -c /home/enzo/Documents/c++/neuronal/src/CModel.cpp",
+  "file": "/home/enzo/Documents/c++/neuronal/src/CModel.cpp",
+  "output": "CMakeFiles/Neuronal.dir/src/CModel.cpp.o"
+},
+{
+  "directory": "/home/enzo/Documents/c++/neuronal/out/build/Configure preset using toolchain file",
+  "command": "/usr/bin/c++ -I/home/enzo/Documents/c++/neuronal/include -isystem /usr/include/jsoncpp -g -Wall -Wextra -Wpedantic -fsanitize=address -std=c++20 -g -Wall -Wextra -Wpedantic -o CMakeFiles/Neuronal.dir/src/CEntraineur.cpp.o -c /home/enzo/Documents/c++/neuronal/src/CEntraineur.cpp",
+  "file": "/home/enzo/Documents/c++/neuronal/src/CEntraineur.cpp",
+  "output": "CMakeFiles/Neuronal.dir/src/CEntraineur.cpp.o"
+},
+{
+  "directory": "/home/enzo/Documents/c++/neuronal/out/build/Configure preset using toolchain file",
+  "command": "/usr/bin/c++ -I/home/enzo/Documents/c++/neuronal/include -isystem /usr/include/jsoncpp -g -Wall -Wextra -Wpedantic -fsanitize=address -std=c++20 -g -Wall -Wextra -Wpedantic -o CMakeFiles/Neuronal.dir/main.cpp.o -c /home/enzo/Documents/c++/neuronal/main.cpp",
+  "file": "/home/enzo/Documents/c++/neuronal/main.cpp",
+  "output": "CMakeFiles/Neuronal.dir/main.cpp.o"
+}
+]

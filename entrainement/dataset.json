@@ -1,0 +1,2062 @@
+[
+    {
+        "chemin": "entrainement/chiffre_6_1772445923130.pgm",
+        "label": 6
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772445930046.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_1_1772445933077.pgm",
+        "label": 1
+    },
+    {
+        "chemin": "entrainement/chiffre_2_1772445936450.pgm",
+        "label": 2
+    },
+    {
+        "chemin": "entrainement/chiffre_3_1772445939287.pgm",
+        "label": 3
+    },
+    {
+        "chemin": "entrainement/chiffre_4_1772445946475.pgm",
+        "label": 4
+    },
+    {
+        "chemin": "entrainement/chiffre_5_1772445947993.pgm",
+        "label": 5
+    },
+    {
+        "chemin": "entrainement/chiffre_5_1772445950639.pgm",
+        "label": 5
+    },
+    {
+        "chemin": "entrainement/chiffre_6_1772445954511.pgm",
+        "label": 6
+    },
+    {
+        "chemin": "entrainement/chiffre_7_1772445960714.pgm",
+        "label": 7
+    },
+    {
+        "chemin": "entrainement/chiffre_8_1772445965277.pgm",
+        "label": 8
+    },
+    {
+        "chemin": "entrainement/chiffre_8_1772445966411.pgm",
+        "label": 8
+    },
+    {
+        "chemin": "entrainement/chiffre_8_1772445971181.pgm",
+        "label": 8
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772445975779.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772445980670.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772445987280.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_3_1772445990658.pgm",
+        "label": 3
+    },
+    {
+        "chemin": "entrainement/chiffre_2_1772445994045.pgm",
+        "label": 2
+    },
+    {
+        "chemin": "entrainement/chiffre_2_1772445999329.pgm",
+        "label": 2
+    },
+    {
+        "chemin": "entrainement/chiffre_4_1772446001675.pgm",
+        "label": 4
+    },
+    {
+        "chemin": "entrainement/chiffre_4_1772446004469.pgm",
+        "label": 4
+    },
+    {
+        "chemin": "entrainement/chiffre_3_1772446007999.pgm",
+        "label": 3
+    },
+    {
+        "chemin": "entrainement/chiffre_3_1772446012804.pgm",
+        "label": 3
+    },
+    {
+        "chemin": "entrainement/chiffre_7_1772446016683.pgm",
+        "label": 7
+    },
+    {
+        "chemin": "entrainement/chiffre_5_1772446020468.pgm",
+        "label": 5
+    },
+    {
+        "chemin": "entrainement/chiffre_5_1772446024325.pgm",
+        "label": 5
+    },
+    {
+        "chemin": "entrainement/chiffre_6_1772446028824.pgm",
+        "label": 6
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772446035092.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_7_1772446039605.pgm",
+        "label": 7
+    },
+    {
+        "chemin": "entrainement/chiffre_7_1772446044325.pgm",
+        "label": 7
+    },
+    {
+        "chemin": "entrainement/chiffre_7_1772446046608.pgm",
+        "label": 7
+    },
+    {
+        "chemin": "entrainement/chiffre_7_1772446046799.pgm",
+        "label": 7
+    },
+    {
+        "chemin": "entrainement/chiffre_8_1772446050542.pgm",
+        "label": 8
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772446054479.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772446060140.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772446065609.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772446070058.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_5_1772446074000.pgm",
+        "label": 5
+    },
+    {
+        "chemin": "entrainement/chiffre_7_1772446082592.pgm",
+        "label": 7
+    },
+    {
+        "chemin": "entrainement/chiffre_2_1772446086992.pgm",
+        "label": 2
+    },
+    {
+        "chemin": "entrainement/chiffre_3_1772446090692.pgm",
+        "label": 3
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772446093944.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772446101231.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772446101537.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772446101759.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772446101965.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772446102165.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772446102386.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_1_1772446105872.pgm",
+        "label": 1
+    },
+    {
+        "chemin": "entrainement/chiffre_1_1772446108540.pgm",
+        "label": 1
+    },
+    {
+        "chemin": "entrainement/chiffre_5_1772446381676.pgm",
+        "label": 5
+    },
+    {
+        "chemin": "entrainement/chiffre_3_1772446384728.pgm",
+        "label": 3
+    },
+    {
+        "chemin": "entrainement/chiffre_4_1772446390382.pgm",
+        "label": 4
+    },
+    {
+        "chemin": "entrainement/chiffre_4_1772446399123.pgm",
+        "label": 4
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772446402517.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_8_1772446405634.pgm",
+        "label": 8
+    },
+    {
+        "chemin": "entrainement/chiffre_8_1772446409797.pgm",
+        "label": 8
+    },
+    {
+        "chemin": "entrainement/chiffre_7_1772446413220.pgm",
+        "label": 7
+    },
+    {
+        "chemin": "entrainement/chiffre_6_1772446416093.pgm",
+        "label": 6
+    },
+    {
+        "chemin": "entrainement/chiffre_5_1772446420550.pgm",
+        "label": 5
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772446423580.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772446426554.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_1_1772446429684.pgm",
+        "label": 1
+    },
+    {
+        "chemin": "entrainement/chiffre_1_1772446433049.pgm",
+        "label": 1
+    },
+    {
+        "chemin": "entrainement/chiffre_1_1772446436457.pgm",
+        "label": 1
+    },
+    {
+        "chemin": "entrainement/chiffre_3_1772446440414.pgm",
+        "label": 3
+    },
+    {
+        "chemin": "entrainement/chiffre_2_1772446444678.pgm",
+        "label": 2
+    },
+    {
+        "chemin": "entrainement/chiffre_2_1772446446702.pgm",
+        "label": 2
+    },
+    {
+        "chemin": "entrainement/chiffre_4_1772446451502.pgm",
+        "label": 4
+    },
+    {
+        "chemin": "entrainement/chiffre_3_1772446454397.pgm",
+        "label": 3
+    },
+    {
+        "chemin": "entrainement/chiffre_3_1772446458247.pgm",
+        "label": 3
+    },
+    {
+        "chemin": "entrainement/chiffre_8_1772446461442.pgm",
+        "label": 8
+    },
+    {
+        "chemin": "entrainement/chiffre_7_1772446466076.pgm",
+        "label": 7
+    },
+    {
+        "chemin": "entrainement/chiffre_6_1772446468530.pgm",
+        "label": 6
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772446473770.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772446477193.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772446480288.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772446483846.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_5_1772446487076.pgm",
+        "label": 5
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772446489556.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_1_1772446492424.pgm",
+        "label": 1
+    },
+    {
+        "chemin": "entrainement/chiffre_1_1772446496260.pgm",
+        "label": 1
+    },
+    {
+        "chemin": "entrainement/chiffre_2_1772446498826.pgm",
+        "label": 2
+    },
+    {
+        "chemin": "entrainement/chiffre_3_1772446501907.pgm",
+        "label": 3
+    },
+    {
+        "chemin": "entrainement/chiffre_4_1772446505835.pgm",
+        "label": 4
+    },
+    {
+        "chemin": "entrainement/chiffre_7_1772446510399.pgm",
+        "label": 7
+    },
+    {
+        "chemin": "entrainement/chiffre_7_1772446511177.pgm",
+        "label": 7
+    },
+    {
+        "chemin": "entrainement/chiffre_7_1772446514956.pgm",
+        "label": 7
+    },
+    {
+        "chemin": "entrainement/chiffre_6_1772446518023.pgm",
+        "label": 6
+    },
+    {
+        "chemin": "entrainement/chiffre_1_1772446521132.pgm",
+        "label": 1
+    },
+    {
+        "chemin": "entrainement/chiffre_1_1772446523834.pgm",
+        "label": 1
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772446527235.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_3_1772446533218.pgm",
+        "label": 3
+    },
+    {
+        "chemin": "entrainement/chiffre_1_1772446535679.pgm",
+        "label": 1
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772446537726.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_5_1772446540177.pgm",
+        "label": 5
+    },
+    {
+        "chemin": "entrainement/chiffre_2_1772446544764.pgm",
+        "label": 2
+    },
+    {
+        "chemin": "entrainement/chiffre_6_1772445923130.pgm",
+        "label": 6
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772445930046.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_1_1772445933077.pgm",
+        "label": 1
+    },
+    {
+        "chemin": "entrainement/chiffre_2_1772445936450.pgm",
+        "label": 2
+    },
+    {
+        "chemin": "entrainement/chiffre_3_1772445939287.pgm",
+        "label": 3
+    },
+    {
+        "chemin": "entrainement/chiffre_4_1772445946475.pgm",
+        "label": 4
+    },
+    {
+        "chemin": "entrainement/chiffre_5_1772445947993.pgm",
+        "label": 5
+    },
+    {
+        "chemin": "entrainement/chiffre_5_1772445950639.pgm",
+        "label": 5
+    },
+    {
+        "chemin": "entrainement/chiffre_6_1772445954511.pgm",
+        "label": 6
+    },
+    {
+        "chemin": "entrainement/chiffre_7_1772445960714.pgm",
+        "label": 7
+    },
+    {
+        "chemin": "entrainement/chiffre_8_1772445965277.pgm",
+        "label": 8
+    },
+    {
+        "chemin": "entrainement/chiffre_8_1772445966411.pgm",
+        "label": 8
+    },
+    {
+        "chemin": "entrainement/chiffre_8_1772445971181.pgm",
+        "label": 8
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772445975779.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772445980670.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772445987280.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_3_1772445990658.pgm",
+        "label": 3
+    },
+    {
+        "chemin": "entrainement/chiffre_2_1772445994045.pgm",
+        "label": 2
+    },
+    {
+        "chemin": "entrainement/chiffre_2_1772445999329.pgm",
+        "label": 2
+    },
+    {
+        "chemin": "entrainement/chiffre_4_1772446001675.pgm",
+        "label": 4
+    },
+    {
+        "chemin": "entrainement/chiffre_4_1772446004469.pgm",
+        "label": 4
+    },
+    {
+        "chemin": "entrainement/chiffre_3_1772446007999.pgm",
+        "label": 3
+    },
+    {
+        "chemin": "entrainement/chiffre_3_1772446012804.pgm",
+        "label": 3
+    },
+    {
+        "chemin": "entrainement/chiffre_7_1772446016683.pgm",
+        "label": 7
+    },
+    {
+        "chemin": "entrainement/chiffre_5_1772446020468.pgm",
+        "label": 5
+    },
+    {
+        "chemin": "entrainement/chiffre_5_1772446024325.pgm",
+        "label": 5
+    },
+    {
+        "chemin": "entrainement/chiffre_6_1772446028824.pgm",
+        "label": 6
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772446035092.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_7_1772446039605.pgm",
+        "label": 7
+    },
+    {
+        "chemin": "entrainement/chiffre_7_1772446044325.pgm",
+        "label": 7
+    },
+    {
+        "chemin": "entrainement/chiffre_7_1772446046608.pgm",
+        "label": 7
+    },
+    {
+        "chemin": "entrainement/chiffre_7_1772446046799.pgm",
+        "label": 7
+    },
+    {
+        "chemin": "entrainement/chiffre_8_1772446050542.pgm",
+        "label": 8
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772446054479.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772446060140.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772446065609.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772446070058.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_5_1772446074000.pgm",
+        "label": 5
+    },
+    {
+        "chemin": "entrainement/chiffre_7_1772446082592.pgm",
+        "label": 7
+    },
+    {
+        "chemin": "entrainement/chiffre_2_1772446086992.pgm",
+        "label": 2
+    },
+    {
+        "chemin": "entrainement/chiffre_3_1772446090692.pgm",
+        "label": 3
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772446093944.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772446101231.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772446101537.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772446101759.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772446101965.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772446102165.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772446102386.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_1_1772446105872.pgm",
+        "label": 1
+    },
+    {
+        "chemin": "entrainement/chiffre_1_1772446108540.pgm",
+        "label": 1
+    },
+    {
+        "chemin": "entrainement/chiffre_4_1772447670153.pgm",
+        "label": 4
+    },
+    {
+        "chemin": "entrainement/chiffre_4_1772447673677.pgm",
+        "label": 4
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772447692775.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_4_1772447699771.pgm",
+        "label": 4
+    },
+    {
+        "chemin": "entrainement/chiffre_2_1772447702809.pgm",
+        "label": 2
+    },
+    {
+        "chemin": "entrainement/chiffre_2_1772447705761.pgm",
+        "label": 2
+    },
+    {
+        "chemin": "entrainement/chiffre_1_1772447709506.pgm",
+        "label": 1
+    },
+    {
+        "chemin": "entrainement/chiffre_1_1772447712771.pgm",
+        "label": 1
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772447715417.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772447718112.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772447720701.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_5_1772447735927.pgm",
+        "label": 5
+    },
+    {
+        "chemin": "entrainement/chiffre_5_1772447739877.pgm",
+        "label": 5
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772447748955.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772447756456.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_5_1772447760057.pgm",
+        "label": 5
+    },
+    {
+        "chemin": "entrainement/chiffre_3_1772447762367.pgm",
+        "label": 3
+    },
+    {
+        "chemin": "entrainement/chiffre_3_1772447764657.pgm",
+        "label": 3
+    },
+    {
+        "chemin": "entrainement/chiffre_3_1772447769455.pgm",
+        "label": 3
+    },
+    {
+        "chemin": "entrainement/chiffre_2_1772447772578.pgm",
+        "label": 2
+    },
+    {
+        "chemin": "entrainement/chiffre_8_1772447779815.pgm",
+        "label": 8
+    },
+    {
+        "chemin": "entrainement/chiffre_7_1772447785363.pgm",
+        "label": 7
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772447790263.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_3_1772447793891.pgm",
+        "label": 3
+    },
+    {
+        "chemin": "entrainement/chiffre_2_1772447796181.pgm",
+        "label": 2
+    },
+    {
+        "chemin": "entrainement/chiffre_6_1772447798847.pgm",
+        "label": 6
+    },
+    {
+        "chemin": "entrainement/chiffre_6_1772447801500.pgm",
+        "label": 6
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772447806227.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_5_1772447808823.pgm",
+        "label": 5
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772447813785.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772447819497.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_6_1772447822234.pgm",
+        "label": 6
+    },
+    {
+        "chemin": "entrainement/chiffre_4_1772447827211.pgm",
+        "label": 4
+    },
+    {
+        "chemin": "entrainement/chiffre_4_1772447830078.pgm",
+        "label": 4
+    },
+    {
+        "chemin": "entrainement/chiffre_6_1772447833636.pgm",
+        "label": 6
+    },
+    {
+        "chemin": "entrainement/chiffre_6_1772447840502.pgm",
+        "label": 6
+    },
+    {
+        "chemin": "entrainement/chiffre_7_1772447850677.pgm",
+        "label": 7
+    },
+    {
+        "chemin": "entrainement/chiffre_4_1772447855947.pgm",
+        "label": 4
+    },
+    {
+        "chemin": "entrainement/chiffre_1_1772447859876.pgm",
+        "label": 1
+    },
+    {
+        "chemin": "entrainement/chiffre_1_1772447863577.pgm",
+        "label": 1
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772447868261.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_8_1772447875078.pgm",
+        "label": 8
+    },
+    {
+        "chemin": "entrainement/chiffre_6_1772447879121.pgm",
+        "label": 6
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772447883986.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_4_1772447889004.pgm",
+        "label": 4
+    },
+    {
+        "chemin": "entrainement/chiffre_4_1772447898074.pgm",
+        "label": 4
+    },
+    {
+        "chemin": "entrainement/chiffre_1_1772447903949.pgm",
+        "label": 1
+    },
+    {
+        "chemin": "entrainement/chiffre_1_1772447906809.pgm",
+        "label": 1
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772447909803.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_2_1772447913125.pgm",
+        "label": 2
+    },
+    {
+        "chemin": "entrainement/chiffre_2_1772447916869.pgm",
+        "label": 2
+    },
+    {
+        "chemin": "entrainement/chiffre_2_1772447920198.pgm",
+        "label": 2
+    },
+    {
+        "chemin": "entrainement/chiffre_3_1772447923464.pgm",
+        "label": 3
+    },
+    {
+        "chemin": "entrainement/chiffre_3_1772447926679.pgm",
+        "label": 3
+    },
+    {
+        "chemin": "entrainement/chiffre_6_1772447934558.pgm",
+        "label": 6
+    },
+    {
+        "chemin": "entrainement/chiffre_4_1772447670153.pgm",
+        "label": 4
+    },
+    {
+        "chemin": "entrainement/chiffre_4_1772447673677.pgm",
+        "label": 4
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772447692775.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_4_1772447699771.pgm",
+        "label": 4
+    },
+    {
+        "chemin": "entrainement/chiffre_2_1772447702809.pgm",
+        "label": 2
+    },
+    {
+        "chemin": "entrainement/chiffre_2_1772447705761.pgm",
+        "label": 2
+    },
+    {
+        "chemin": "entrainement/chiffre_1_1772447709506.pgm",
+        "label": 1
+    },
+    {
+        "chemin": "entrainement/chiffre_1_1772447712771.pgm",
+        "label": 1
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772447715417.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772447718112.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772447720701.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_5_1772447735927.pgm",
+        "label": 5
+    },
+    {
+        "chemin": "entrainement/chiffre_5_1772447739877.pgm",
+        "label": 5
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772447748955.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772447756456.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_5_1772447760057.pgm",
+        "label": 5
+    },
+    {
+        "chemin": "entrainement/chiffre_3_1772447762367.pgm",
+        "label": 3
+    },
+    {
+        "chemin": "entrainement/chiffre_3_1772447764657.pgm",
+        "label": 3
+    },
+    {
+        "chemin": "entrainement/chiffre_3_1772447769455.pgm",
+        "label": 3
+    },
+    {
+        "chemin": "entrainement/chiffre_2_1772447772578.pgm",
+        "label": 2
+    },
+    {
+        "chemin": "entrainement/chiffre_8_1772447779815.pgm",
+        "label": 8
+    },
+    {
+        "chemin": "entrainement/chiffre_7_1772447785363.pgm",
+        "label": 7
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772447790263.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_3_1772447793891.pgm",
+        "label": 3
+    },
+    {
+        "chemin": "entrainement/chiffre_2_1772447796181.pgm",
+        "label": 2
+    },
+    {
+        "chemin": "entrainement/chiffre_6_1772447798847.pgm",
+        "label": 6
+    },
+    {
+        "chemin": "entrainement/chiffre_6_1772447801500.pgm",
+        "label": 6
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772447806227.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_5_1772447808823.pgm",
+        "label": 5
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772447813785.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772447819497.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_6_1772447822234.pgm",
+        "label": 6
+    },
+    {
+        "chemin": "entrainement/chiffre_4_1772447827211.pgm",
+        "label": 4
+    },
+    {
+        "chemin": "entrainement/chiffre_4_1772447830078.pgm",
+        "label": 4
+    },
+    {
+        "chemin": "entrainement/chiffre_6_1772447833636.pgm",
+        "label": 6
+    },
+    {
+        "chemin": "entrainement/chiffre_6_1772447840502.pgm",
+        "label": 6
+    },
+    {
+        "chemin": "entrainement/chiffre_7_1772447850677.pgm",
+        "label": 7
+    },
+    {
+        "chemin": "entrainement/chiffre_4_1772447855947.pgm",
+        "label": 4
+    },
+    {
+        "chemin": "entrainement/chiffre_1_1772447859876.pgm",
+        "label": 1
+    },
+    {
+        "chemin": "entrainement/chiffre_1_1772447863577.pgm",
+        "label": 1
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772447868261.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_8_1772447875078.pgm",
+        "label": 8
+    },
+    {
+        "chemin": "entrainement/chiffre_6_1772447879121.pgm",
+        "label": 6
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772447883986.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_4_1772447889004.pgm",
+        "label": 4
+    },
+    {
+        "chemin": "entrainement/chiffre_4_1772447898074.pgm",
+        "label": 4
+    },
+    {
+        "chemin": "entrainement/chiffre_1_1772447903949.pgm",
+        "label": 1
+    },
+    {
+        "chemin": "entrainement/chiffre_1_1772447906809.pgm",
+        "label": 1
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772447909803.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_2_1772447913125.pgm",
+        "label": 2
+    },
+    {
+        "chemin": "entrainement/chiffre_2_1772447916869.pgm",
+        "label": 2
+    },
+    {
+        "chemin": "entrainement/chiffre_2_1772447920198.pgm",
+        "label": 2
+    },
+    {
+        "chemin": "entrainement/chiffre_3_1772447923464.pgm",
+        "label": 3
+    },
+    {
+        "chemin": "entrainement/chiffre_3_1772447926679.pgm",
+        "label": 3
+    },
+    {
+        "chemin": "entrainement/chiffre_6_1772447934558.pgm",
+        "label": 6
+    },
+    {
+        "chemin": "entrainement/chiffre_2_1772461462489.pgm",
+        "label": 2
+    },
+    {
+        "chemin": "entrainement/chiffre_4_1772461467200.pgm",
+        "label": 4
+    },
+    {
+        "chemin": "entrainement/chiffre_6_1772461473105.pgm",
+        "label": 6
+    },
+    {
+        "chemin": "entrainement/chiffre_5_1772461485734.pgm",
+        "label": 5
+    },
+    {
+        "chemin": "entrainement/chiffre_4_1772461490929.pgm",
+        "label": 4
+    },
+    {
+        "chemin": "entrainement/chiffre_7_1772461496183.pgm",
+        "label": 7
+    },
+    {
+        "chemin": "entrainement/chiffre_6_1772461500957.pgm",
+        "label": 6
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772461504009.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772461507362.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772461512476.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_3_1772461517907.pgm",
+        "label": 3
+    },
+    {
+        "chemin": "entrainement/chiffre_3_1772461532236.pgm",
+        "label": 3
+    },
+    {
+        "chemin": "entrainement/chiffre_1_1772461546268.pgm",
+        "label": 1
+    },
+    {
+        "chemin": "entrainement/chiffre_2_1772461550312.pgm",
+        "label": 2
+    },
+    {
+        "chemin": "entrainement/chiffre_1_1772462520119.pgm",
+        "label": 1
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772462524990.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_6_1772462532507.pgm",
+        "label": 6
+    },
+    {
+        "chemin": "entrainement/chiffre_6_1772462535967.pgm",
+        "label": 6
+    },
+    {
+        "chemin": "entrainement/chiffre_1_1772462539491.pgm",
+        "label": 1
+    },
+    {
+        "chemin": "entrainement/chiffre_3_1772462542536.pgm",
+        "label": 3
+    },
+    {
+        "chemin": "entrainement/chiffre_2_1772462546231.pgm",
+        "label": 2
+    },
+    {
+        "chemin": "entrainement/chiffre_4_1772462550004.pgm",
+        "label": 4
+    },
+    {
+        "chemin": "entrainement/chiffre_4_1772462552536.pgm",
+        "label": 4
+    },
+    {
+        "chemin": "entrainement/chiffre_5_1772462556359.pgm",
+        "label": 5
+    },
+    {
+        "chemin": "entrainement/chiffre_7_1772462561359.pgm",
+        "label": 7
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772462564876.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772462567479.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_3_1772462570578.pgm",
+        "label": 3
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772462817433.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_3_1772462824368.pgm",
+        "label": 3
+    },
+    {
+        "chemin": "entrainement/chiffre_4_1772462827611.pgm",
+        "label": 4
+    },
+    {
+        "chemin": "entrainement/chiffre_6_1772462832238.pgm",
+        "label": 6
+    },
+    {
+        "chemin": "entrainement/chiffre_6_1772462837801.pgm",
+        "label": 6
+    },
+    {
+        "chemin": "entrainement/chiffre_7_1772462846286.pgm",
+        "label": 7
+    },
+    {
+        "chemin": "entrainement/chiffre_7_1772462855226.pgm",
+        "label": 7
+    },
+    {
+        "chemin": "entrainement/chiffre_8_1772462862340.pgm",
+        "label": 8
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772462866560.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772462869752.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772462878214.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772462880522.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_1_1772462894532.pgm",
+        "label": 1
+    },
+    {
+        "chemin": "entrainement/chiffre_1_1772462897589.pgm",
+        "label": 1
+    },
+    {
+        "chemin": "entrainement/chiffre_4_1772462901944.pgm",
+        "label": 4
+    },
+    {
+        "chemin": "entrainement/chiffre_6_1772462912086.pgm",
+        "label": 6
+    },
+    {
+        "chemin": "entrainement/chiffre_5_1772462915649.pgm",
+        "label": 5
+    },
+    {
+        "chemin": "entrainement/chiffre_3_1772462918828.pgm",
+        "label": 3
+    },
+    {
+        "chemin": "entrainement/chiffre_2_1772462921656.pgm",
+        "label": 2
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772462925818.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_1_1772463749512.pgm",
+        "label": 1
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772463751911.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_4_1772463757237.pgm",
+        "label": 4
+    },
+    {
+        "chemin": "entrainement/chiffre_6_1772463765531.pgm",
+        "label": 6
+    },
+    {
+        "chemin": "entrainement/chiffre_7_1772463775575.pgm",
+        "label": 7
+    },
+    {
+        "chemin": "entrainement/chiffre_5_1772463779265.pgm",
+        "label": 5
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772463782292.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772463785540.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_8_1772463790536.pgm",
+        "label": 8
+    },
+    {
+        "chemin": "entrainement/chiffre_7_1772463801151.pgm",
+        "label": 7
+    },
+    {
+        "chemin": "entrainement/chiffre_8_1772463806433.pgm",
+        "label": 8
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772463809445.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772463815947.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772463818881.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772463822578.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772463822906.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_4_1772463827332.pgm",
+        "label": 4
+    },
+    {
+        "chemin": "entrainement/chiffre_4_1772463830643.pgm",
+        "label": 4
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772463835661.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_7_1772463839672.pgm",
+        "label": 7
+    },
+    {
+        "chemin": "entrainement/chiffre_1_1772463843534.pgm",
+        "label": 1
+    },
+    {
+        "chemin": "entrainement/chiffre_1_1772463846260.pgm",
+        "label": 1
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772463849707.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772463854481.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_3_1772463857680.pgm",
+        "label": 3
+    },
+    {
+        "chemin": "entrainement/chiffre_3_1772463864124.pgm",
+        "label": 3
+    },
+    {
+        "chemin": "entrainement/chiffre_3_1772463867601.pgm",
+        "label": 3
+    },
+    {
+        "chemin": "entrainement/chiffre_1_1772463870441.pgm",
+        "label": 1
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772463872575.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_5_1772463875800.pgm",
+        "label": 5
+    },
+    {
+        "chemin": "entrainement/chiffre_4_1772463881782.pgm",
+        "label": 4
+    },
+    {
+        "chemin": "entrainement/chiffre_4_1772463888539.pgm",
+        "label": 4
+    },
+    {
+        "chemin": "entrainement/chiffre_4_1772463889474.pgm",
+        "label": 4
+    },
+    {
+        "chemin": "entrainement/chiffre_4_1772463892971.pgm",
+        "label": 4
+    },
+    {
+        "chemin": "entrainement/chiffre_4_1772463897088.pgm",
+        "label": 4
+    },
+    {
+        "chemin": "entrainement/chiffre_1_1772463906943.pgm",
+        "label": 1
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772463910220.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772463919313.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_1_1772463923066.pgm",
+        "label": 1
+    },
+    {
+        "chemin": "entrainement/chiffre_5_1772463930017.pgm",
+        "label": 5
+    },
+    {
+        "chemin": "entrainement/chiffre_6_1772463939779.pgm",
+        "label": 6
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772463946237.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_3_1772463951182.pgm",
+        "label": 3
+    },
+    {
+        "chemin": "entrainement/chiffre_1_1772463957178.pgm",
+        "label": 1
+    },
+    {
+        "chemin": "entrainement/chiffre_2_1772463967315.pgm",
+        "label": 2
+    },
+    {
+        "chemin": "entrainement/chiffre_6_1772463971047.pgm",
+        "label": 6
+    },
+    {
+        "chemin": "entrainement/chiffre_3_1772463975978.pgm",
+        "label": 3
+    },
+    {
+        "chemin": "entrainement/chiffre_8_1772463982571.pgm",
+        "label": 8
+    },
+    {
+        "chemin": "entrainement/chiffre_8_1772463986467.pgm",
+        "label": 8
+    },
+    {
+        "chemin": "entrainement/chiffre_8_1772463989742.pgm",
+        "label": 8
+    },
+    {
+        "chemin": "entrainement/chiffre_6_1772463998855.pgm",
+        "label": 6
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772464001274.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772464014852.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_1_1772464072473.pgm",
+        "label": 1
+    },
+    {
+        "chemin": "entrainement/chiffre_5_1772464077131.pgm",
+        "label": 5
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772464083201.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_4_1772464090534.pgm",
+        "label": 4
+    },
+    {
+        "chemin": "entrainement/chiffre_4_1772464093701.pgm",
+        "label": 4
+    },
+    {
+        "chemin": "entrainement/chiffre_3_1772464096419.pgm",
+        "label": 3
+    },
+    {
+        "chemin": "entrainement/chiffre_2_1772464098880.pgm",
+        "label": 2
+    },
+    {
+        "chemin": "entrainement/chiffre_1_1772464102403.pgm",
+        "label": 1
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772464106676.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_5_1772464110733.pgm",
+        "label": 5
+    },
+    {
+        "chemin": "entrainement/chiffre_6_1772464113715.pgm",
+        "label": 6
+    },
+    {
+        "chemin": "entrainement/chiffre_7_1772464116566.pgm",
+        "label": 7
+    },
+    {
+        "chemin": "entrainement/chiffre_7_1772464119970.pgm",
+        "label": 7
+    },
+    {
+        "chemin": "entrainement/chiffre_7_1772464122929.pgm",
+        "label": 7
+    },
+    {
+        "chemin": "entrainement/chiffre_8_1772464126046.pgm",
+        "label": 8
+    },
+    {
+        "chemin": "entrainement/chiffre_8_1772464129355.pgm",
+        "label": 8
+    },
+    {
+        "chemin": "entrainement/chiffre_7_1772464134797.pgm",
+        "label": 7
+    },
+    {
+        "chemin": "entrainement/chiffre_4_1772464138883.pgm",
+        "label": 4
+    },
+    {
+        "chemin": "entrainement/chiffre_4_1772464144289.pgm",
+        "label": 4
+    },
+    {
+        "chemin": "entrainement/chiffre_1_1772464149781.pgm",
+        "label": 1
+    },
+    {
+        "chemin": "entrainement/chiffre_5_1772464152982.pgm",
+        "label": 5
+    },
+    {
+        "chemin": "entrainement/chiffre_3_1772464156077.pgm",
+        "label": 3
+    },
+    {
+        "chemin": "entrainement/chiffre_6_1772464163458.pgm",
+        "label": 6
+    },
+    {
+        "chemin": "entrainement/chiffre_1_1772464169613.pgm",
+        "label": 1
+    },
+    {
+        "chemin": "entrainement/chiffre_5_1772464179326.pgm",
+        "label": 5
+    },
+    {
+        "chemin": "entrainement/chiffre_8_1772464187469.pgm",
+        "label": 8
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772464190771.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_6_1772464195677.pgm",
+        "label": 6
+    },
+    {
+        "chemin": "entrainement/chiffre_1_1772464198473.pgm",
+        "label": 1
+    },
+    {
+        "chemin": "entrainement/chiffre_5_1772464433453.pgm",
+        "label": 5
+    },
+    {
+        "chemin": "entrainement/chiffre_4_1772464445376.pgm",
+        "label": 4
+    },
+    {
+        "chemin": "entrainement/chiffre_8_1772464457399.pgm",
+        "label": 8
+    },
+    {
+        "chemin": "entrainement/chiffre_8_1772464461714.pgm",
+        "label": 8
+    },
+    {
+        "chemin": "entrainement/chiffre_8_1772464465522.pgm",
+        "label": 8
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772464469016.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_3_1772464476126.pgm",
+        "label": 3
+    },
+    {
+        "chemin": "entrainement/chiffre_2_1772464483400.pgm",
+        "label": 2
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772464488713.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_1_1772464492700.pgm",
+        "label": 1
+    },
+    {
+        "chemin": "entrainement/chiffre_1_1772464496136.pgm",
+        "label": 1
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772464516299.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772464517853.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772464518010.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772464518174.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772464518353.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772464518523.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772464518702.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772464518881.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_7_1772464525334.pgm",
+        "label": 7
+    },
+    {
+        "chemin": "entrainement/chiffre_5_1772464540524.pgm",
+        "label": 5
+    },
+    {
+        "chemin": "entrainement/chiffre_5_1772464546143.pgm",
+        "label": 5
+    },
+    {
+        "chemin": "entrainement/chiffre_3_1772464551806.pgm",
+        "label": 3
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772464554530.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772464557775.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_1_1772464560541.pgm",
+        "label": 1
+    },
+    {
+        "chemin": "entrainement/chiffre_6_1772464565054.pgm",
+        "label": 6
+    },
+    {
+        "chemin": "entrainement/chiffre_6_1772464573710.pgm",
+        "label": 6
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772464576436.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_3_1772464579700.pgm",
+        "label": 3
+    },
+    {
+        "chemin": "entrainement/chiffre_3_1772464583422.pgm",
+        "label": 3
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772464591209.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_5_1772464595415.pgm",
+        "label": 5
+    },
+    {
+        "chemin": "entrainement/chiffre_1_1772465025123.pgm",
+        "label": 1
+    },
+    {
+        "chemin": "entrainement/chiffre_3_1772465039441.pgm",
+        "label": 3
+    },
+    {
+        "chemin": "entrainement/chiffre_8_1772465050751.pgm",
+        "label": 8
+    },
+    {
+        "chemin": "entrainement/chiffre_6_1772465059342.pgm",
+        "label": 6
+    },
+    {
+        "chemin": "entrainement/chiffre_5_1772465063963.pgm",
+        "label": 5
+    },
+    {
+        "chemin": "entrainement/chiffre_7_1772465071549.pgm",
+        "label": 7
+    },
+    {
+        "chemin": "entrainement/chiffre_6_1772465079264.pgm",
+        "label": 6
+    },
+    {
+        "chemin": "entrainement/chiffre_5_1772466585854.pgm",
+        "label": 5
+    },
+    {
+        "chemin": "entrainement/chiffre_1_1772466591741.pgm",
+        "label": 1
+    },
+    {
+        "chemin": "entrainement/chiffre_4_1772466602407.pgm",
+        "label": 4
+    },
+    {
+        "chemin": "entrainement/chiffre_4_1772474076314.pgm",
+        "label": 4
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772474232642.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772480750632.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_3_1772480834591.pgm",
+        "label": 3
+    },
+    {
+        "chemin": "entrainement/chiffre_3_1772480853432.pgm",
+        "label": 3
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772480860879.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_6_1772480868241.pgm",
+        "label": 6
+    },
+    {
+        "chemin": "entrainement/chiffre_5_1772480874135.pgm",
+        "label": 5
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772480878457.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_1_1772480882865.pgm",
+        "label": 1
+    },
+    {
+        "chemin": "entrainement/chiffre_7_1772480890526.pgm",
+        "label": 7
+    },
+    {
+        "chemin": "entrainement/chiffre_4_1772480896389.pgm",
+        "label": 4
+    },
+    {
+        "chemin": "entrainement/chiffre_1_1772480903714.pgm",
+        "label": 1
+    },
+    {
+        "chemin": "entrainement/chiffre_2_1772480908101.pgm",
+        "label": 2
+    },
+    {
+        "chemin": "entrainement/chiffre_3_1772480914463.pgm",
+        "label": 3
+    },
+    {
+        "chemin": "entrainement/chiffre_5_1772480918721.pgm",
+        "label": 5
+    },
+    {
+        "chemin": "entrainement/chiffre_7_1772481030924.pgm",
+        "label": 7
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772481045668.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_2_1772481051146.pgm",
+        "label": 2
+    },
+    {
+        "chemin": "entrainement/chiffre_3_1772481058906.pgm",
+        "label": 3
+    },
+    {
+        "chemin": "entrainement/chiffre_4_1772481062992.pgm",
+        "label": 4
+    },
+    {
+        "chemin": "entrainement/chiffre_8_1772481067999.pgm",
+        "label": 8
+    },
+    {
+        "chemin": "entrainement/chiffre_1_1772481285835.pgm",
+        "label": 1
+    },
+    {
+        "chemin": "entrainement/chiffre_3_1772481297005.pgm",
+        "label": 3
+    },
+    {
+        "chemin": "entrainement/chiffre_2_1772481300771.pgm",
+        "label": 2
+    },
+    {
+        "chemin": "entrainement/chiffre_1_1772481307339.pgm",
+        "label": 1
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772481314421.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_5_1772481318934.pgm",
+        "label": 5
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772481325973.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_1_1772481536778.pgm",
+        "label": 1
+    },
+    {
+        "chemin": "entrainement/chiffre_4_1772481562579.pgm",
+        "label": 4
+    },
+    {
+        "chemin": "entrainement/chiffre_5_1772481573810.pgm",
+        "label": 5
+    },
+    {
+        "chemin": "entrainement/chiffre_6_1772481578181.pgm",
+        "label": 6
+    },
+    {
+        "chemin": "entrainement/chiffre_7_1772481579329.pgm",
+        "label": 7
+    },
+    {
+        "chemin": "entrainement/chiffre_7_1772481585989.pgm",
+        "label": 7
+    },
+    {
+        "chemin": "entrainement/chiffre_8_1772481593783.pgm",
+        "label": 8
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772481598482.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_5_1772482673050.pgm",
+        "label": 5
+    },
+    {
+        "chemin": "entrainement/chiffre_6_1772482687745.pgm",
+        "label": 6
+    },
+    {
+        "chemin": "entrainement/chiffre_7_1772482739836.pgm",
+        "label": 7
+    },
+    {
+        "chemin": "entrainement/chiffre_2_1772482756391.pgm",
+        "label": 2
+    },
+    {
+        "chemin": "entrainement/chiffre_4_1772482770886.pgm",
+        "label": 4
+    },
+    {
+        "chemin": "entrainement/chiffre_4_1772482779013.pgm",
+        "label": 4
+    },
+    {
+        "chemin": "entrainement/chiffre_3_1772482789507.pgm",
+        "label": 3
+    },
+    {
+        "chemin": "entrainement/chiffre_5_1772482796436.pgm",
+        "label": 5
+    },
+    {
+        "chemin": "entrainement/chiffre_6_1772482801512.pgm",
+        "label": 6
+    },
+    {
+        "chemin": "entrainement/chiffre_7_1772482807678.pgm",
+        "label": 7
+    },
+    {
+        "chemin": "entrainement/chiffre_8_1772482813154.pgm",
+        "label": 8
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772482818515.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772521379967.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_3_1772521399165.pgm",
+        "label": 3
+    },
+    {
+        "chemin": "entrainement/chiffre_4_1772521406096.pgm",
+        "label": 4
+    },
+    {
+        "chemin": "entrainement/chiffre_5_1772521412349.pgm",
+        "label": 5
+    },
+    {
+        "chemin": "entrainement/chiffre_6_1772521417746.pgm",
+        "label": 6
+    },
+    {
+        "chemin": "entrainement/chiffre_7_1772521427379.pgm",
+        "label": 7
+    },
+    {
+        "chemin": "entrainement/chiffre_8_1772521432904.pgm",
+        "label": 8
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772521445365.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772521962773.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_5_1772521968208.pgm",
+        "label": 5
+    },
+    {
+        "chemin": "entrainement/chiffre_3_1772521974736.pgm",
+        "label": 3
+    },
+    {
+        "chemin": "entrainement/chiffre_4_1772521984584.pgm",
+        "label": 4
+    },
+    {
+        "chemin": "entrainement/chiffre_7_1772522019016.pgm",
+        "label": 7
+    },
+    {
+        "chemin": "entrainement/chiffre_7_1772522027866.pgm",
+        "label": 7
+    },
+    {
+        "chemin": "entrainement/chiffre_8_1772522033198.pgm",
+        "label": 8
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772522038252.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_1_1772523186898.pgm",
+        "label": 1
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772523191342.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_5_1772523222662.pgm",
+        "label": 5
+    },
+    {
+        "chemin": "entrainement/chiffre_6_1772523229256.pgm",
+        "label": 6
+    },
+    {
+        "chemin": "entrainement/chiffre_7_1772523234104.pgm",
+        "label": 7
+    },
+    {
+        "chemin": "entrainement/chiffre_8_1772523240898.pgm",
+        "label": 8
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772523246833.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_0_1772523457005.pgm",
+        "label": 0
+    },
+    {
+        "chemin": "entrainement/chiffre_1_1772523465169.pgm",
+        "label": 1
+    },
+    {
+        "chemin": "entrainement/chiffre_2_1772523471902.pgm",
+        "label": 2
+    },
+    {
+        "chemin": "entrainement/chiffre_3_1772523476058.pgm",
+        "label": 3
+    },
+    {
+        "chemin": "entrainement/chiffre_4_1772523487734.pgm",
+        "label": 4
+    },
+    {
+        "chemin": "entrainement/chiffre_5_1772523503180.pgm",
+        "label": 5
+    },
+    {
+        "chemin": "entrainement/chiffre_6_1772523509323.pgm",
+        "label": 6
+    },
+    {
+        "chemin": "entrainement/chiffre_7_1772523517702.pgm",
+        "label": 7
+    },
+    {
+        "chemin": "entrainement/chiffre_8_1772523523029.pgm",
+        "label": 8
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772523529640.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_9_1772524183451.pgm",
+        "label": 9
+    },
+    {
+        "chemin": "entrainement/chiffre_5_1772524323882.pgm",
+        "label": 5
+    },
+    {
+        "chemin": "entrainement/chiffre_7_1772524332204.pgm",
+        "label": 7
+    }
+]
