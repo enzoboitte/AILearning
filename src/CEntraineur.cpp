@@ -168,23 +168,58 @@ void CEntraineur::F_vLancerEntrainement() {
                  g_genRandom);
 
     size_t l_iErreurs = 0;
-    double l_dCrossEntropyLoss = 0.0;
+    double l_dLoss = 0.0;
+    const bool l_bClassif =
+        (l_cModele.F_vGetMode() == OutputMode::Classification);
+    const int l_iNbSorties = l_vLayers.back();
+
     for (const auto &[l_lPixels, l_iVraiChiffre] : g_lDonneesEntrainement) {
       auto fwd = l_cModele.F_vPredict(l_lPixels);
-      if (fwd.predicted != l_iVraiChiffre)
-        ++l_iErreurs;
-
       const auto &l_vOutput = fwd.activations.back();
-      float l_fProb = std::clamp(l_vOutput[l_iVraiChiffre], 1e-7f, 1.f);
-      l_dCrossEntropyLoss -= std::log(l_fProb);
 
-      l_cModele.F_vTrain(l_lPixels, l_iVraiChiffre,
-                         F_fGetTauxApprentissage() *
-                             l_aWeights[l_iVraiChiffre]);
+      if (l_bClassif) {
+        // ── Classification ──────────────────────────────────────────────────
+        if (fwd.predicted != l_iVraiChiffre)
+          ++l_iErreurs;
+
+        // Loss : Cross-Entropy
+        float l_fProb = std::clamp(l_vOutput[l_iVraiChiffre], 1e-7f, 1.f);
+        l_dLoss -= std::log(l_fProb);
+
+        l_cModele.F_vTrain(l_lPixels, l_iVraiChiffre,
+                           F_fGetTauxApprentissage() *
+                               l_aWeights[l_iVraiChiffre]);
+      } else {
+        // ── Régression ──────────────────────────────────────────────────────
+        // Cible : vecteur de taille l_iNbSorties
+        // Si 1 neurone → valeur normalisée du label [0,1]
+        // Si N neurones → one-hot (même principe que classification mais MSE)
+        std::vector<float> l_vTarget(l_iNbSorties, 0.f);
+        if (l_iNbSorties == 1) {
+          // Régression scalaire : normalise le label entre 0 et 1
+          l_vTarget[0] = static_cast<float>(l_iVraiChiffre) / 9.f;
+        } else {
+          // One-hot sur N sorties
+          if (l_iVraiChiffre < l_iNbSorties)
+            l_vTarget[l_iVraiChiffre] = 1.f;
+        }
+
+        // Erreur de prédiction (classe la plus proche)
+        if (fwd.predicted != l_iVraiChiffre)
+          ++l_iErreurs;
+
+        // Loss : MSE
+        for (int k = 0; k < l_iNbSorties; ++k) {
+          float d = l_vOutput[k] - l_vTarget[k];
+          l_dLoss += d * d;
+        }
+
+        l_cModele.F_vTrain(l_lPixels, l_vTarget, F_fGetTauxApprentissage());
+      }
     }
 
     float l_fErrorRate = (static_cast<float>(l_iErreurs) / l_fTotal) * 100.f;
-    float l_fLoss = static_cast<float>(l_dCrossEntropyLoss / l_fTotal);
+    float l_fLoss = static_cast<float>(l_dLoss / l_fTotal);
     std::cout << "\rÉpoch " << (l_iEpoch + 1) << "/" << g_iNbEpochs
               << " | Loss : " << l_fLoss << " | Err : " << l_fErrorRate
               << "% | Taux : " << g_fTauxApprentissage << "    " << std::flush;

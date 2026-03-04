@@ -29,10 +29,16 @@ std::vector<float> div_vectors(const std::vector<float> &a,
 //         → couche cachée 2  : 64 neurones   (ReLU)
 //         → couche de sortie : 10 neurones   (Softmax)
 //
+enum class OutputMode {
+  Classification, // Softmax + Cross-Entropy (classes discrètes)
+  Regression      // Linéaire + MSE         (valeurs continues)
+};
+
 class CModel {
 public:
   // Construit et initialise aléatoirement (He init)
-  explicit CModel(const std::vector<int> &layers);
+  explicit CModel(const std::vector<int> &layers,
+                  OutputMode mode = OutputMode::Classification);
   // Constructeur par défaut (pour désérialisation)
   CModel() = default;
   ~CModel() = default;
@@ -51,14 +57,20 @@ public:
   ForwardResult F_vPredict(const std::vector<float> &input) const;
 
   // Backprop + mise à jour des poids
+  // Classification : trueLabel = indice de la classe correcte
   void F_vTrain(const std::vector<float> &input, int trueLabel,
                 float learningRate);
+  // Régression : target = vecteur de valeurs souhaitées (taille = couche
+  // sortie)
+  void F_vTrain(const std::vector<float> &input,
+                const std::vector<float> &target, float learningRate);
 
   // Sérialisation binaire
   void F_vSave(const std::string &filename) const;
 
-  // Accès à la topologie
+  // Accès à la topologie et au mode
   const std::vector<int> &F_vGetLayers() const { return layers_; }
+  OutputMode F_vGetMode() const { return mode_; }
 
   // Poids et biais (accès direct pour le chargeur)
   std::vector<std::vector<float>>
@@ -68,6 +80,7 @@ public:
 
 private:
   std::vector<int> layers_; // topologie complète, y compris input et output
+  OutputMode mode_;         // mode de sortie
 
   void F_vInitWeights();
 };

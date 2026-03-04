@@ -61,7 +61,8 @@ std::vector<float> div_vectors(const std::vector<float> &a,
 
 // ─── CModel ──────────────────────────────────────────────────────────────────
 
-CModel::CModel(const std::vector<int> &layers) : layers_(layers) {
+CModel::CModel(const std::vector<int> &layers, OutputMode mode)
+    : layers_(layers), mode_(mode) {
   assert(layers_.size() >= 2 &&
          "Il faut au moins une couche d'entrée et une de sortie");
   F_vInitWeights();
@@ -110,15 +111,15 @@ CModel::F_vPredict(const std::vector<float> &input) const {
     cblas_sgemv(CblasRowMajor, CblasNoTrans, out, in, 1.f, weights_[l].data(),
                 in, result.activations[l].data(), 1, 1.f, Z.data(), 1);
 
-    // Activation : ReLU pour couches cachées, Softmax pour la sortie
+    // Activation : ReLU pour couches cachées, dépend du mode pour la sortie
     std::vector<float> &A = result.activations[l + 1];
     if (l < L - 1) {
       // Couche cachée → ReLU
       A.resize(out);
       for (int i = 0; i < out; ++i)
         A[i] = Z[i] > 0.f ? Z[i] : 0.f;
-    } else {
-      // Couche de sortie → Softmax
+    } else if (mode_ == OutputMode::Classification) {
+      // Classification → Softmax
       A = Z;
       float mx = *std::max_element(A.begin(), A.end());
       float sum = 0.f;
@@ -128,75 +129,95 @@ CModel::F_vPredict(const std::vector<float> &input) const {
       }
       for (float &v : A)
         v /= sum;
+    } else {
+      // Régression → linéaire (identité) : A = Z
+      A = Z;
     }
   }
 
-  int pred = static_cast<int>(std::max_element(result.activations[L].begin(),
-                                               result.activations[L].end()) -
-                              result.activations[L].begin());
+  const auto &out_act = result.activations[L];
+  int pred = static_cast<int>(std::max_element(out_act.begin(), out_act.end()) -
+                              out_act.begin());
   result.predicted = pred;
-  result.confidence = result.activations[L][pred] * 100.f;
+  result.confidence =
+      out_act[pred] * (mode_ == OutputMode::Classification ? 100.f : 1.f);
   return result;
 }
 
 // ── Backprop + mise à jour
-// ────────────────────────────────────────────────────
-
-void CModel::F_vTrain(const std::vector<float> &input, int trueLabel,
-                      float learningRate) {
-  // 1. Forward
-  auto fwd = F_vPredict(input);
-  int L = static_cast<int>(layers_.size()) - 1;
-
-  // 2. Calcul des deltas (dL/dZ) par couche, de la sortie vers l'entrée
+// ──────────────────────────────────────────────────── Helper interne : calcule
+// les deltas à partir du gradient de sortie fourni
+static void
+f_vBackprop(const CModel::ForwardResult &fwd, const std::vector<int> &layers,
+            std::vector<std::vector<float>> weights, // copie pour cblas_sgemv
+            std::vector<std::vector<float>> &weights_ref,
+            std::vector<std::vector<float>> &biases_ref,
+            const std::vector<float> &delta_out, float lr) {
+  int L = static_cast<int>(layers.size()) - 1;
   std::vector<std::vector<float>> deltas(L);
+  deltas[L - 1] = delta_out;
 
-  // Delta couche de sortie : dL/dZ_out = softmax - one_hot
-  deltas[L - 1].resize(layers_[L]);
-  for (int i = 0; i < layers_[L]; ++i)
-    deltas[L - 1][i] = fwd.activations[L][i] - (i == trueLabel ? 1.f : 0.f);
-
-  // Delta couches cachées : dL/dZ_l = (W_{l+1}^T * delta_{l+1}) * ReLU'(Z_l)
   for (int l = L - 2; l >= 0; --l) {
-    int in = layers_[l + 1];  // = out de la couche l
-    int out = layers_[l + 2]; // = out de la couche l+1
+    int in = layers[l + 1];
+    int out = layers[l + 2];
     deltas[l].assign(in, 0.f);
-
-    // dA = W^T * delta_{l+1}
-    cblas_sgemv(CblasRowMajor, CblasTrans, out, in, 1.f, weights_[l + 1].data(),
+    cblas_sgemv(CblasRowMajor, CblasTrans, out, in, 1.f, weights[l + 1].data(),
                 in, deltas[l + 1].data(), 1, 0.f, deltas[l].data(), 1);
-
-    // Multiplication par ReLU'(Z_l)
     const auto &Z = fwd.preActivations[l];
     for (int i = 0; i < in; ++i)
       deltas[l][i] *= (Z[i] > 0.f ? 1.f : 0.f);
   }
 
-  // 3. Mise à jour des poids et biais
   for (int l = 0; l < L; ++l) {
-    int in = layers_[l];
-    int out = layers_[l + 1];
-
-    // W[l] -= lr * delta[l] ⊗ A[l]
-    cblas_sger(CblasRowMajor, out, in, -learningRate, deltas[l].data(), 1,
-               fwd.activations[l].data(), 1, weights_[l].data(), in);
-
-    // B[l] -= lr * delta[l]
-    for (int i = 0; i < out; ++i)
-      biases_[l][i] -= learningRate * deltas[l][i];
+    int in = layers[l];
+    int out_sz = layers[l + 1];
+    cblas_sger(CblasRowMajor, out_sz, in, -lr, deltas[l].data(), 1,
+               fwd.activations[l].data(), 1, weights_ref[l].data(), in);
+    for (int i = 0; i < out_sz; ++i)
+      biases_ref[l][i] -= lr * deltas[l][i];
   }
+}
+
+// Classification : trueLabel = indice de la classe correcte
+void CModel::F_vTrain(const std::vector<float> &input, int trueLabel,
+                      float learningRate) {
+  auto fwd = F_vPredict(input);
+  int L = static_cast<int>(layers_.size()) - 1;
+
+  // dL/dZ_out = softmax(out) - one_hot(trueLabel)
+  std::vector<float> delta_out(layers_[L]);
+  for (int i = 0; i < layers_[L]; ++i)
+    delta_out[i] = fwd.activations[L][i] - (i == trueLabel ? 1.f : 0.f);
+
+  f_vBackprop(fwd, layers_, weights_, weights_, biases_, delta_out,
+              learningRate);
+}
+
+// Régression : target = valeurs continues souhaitées
+void CModel::F_vTrain(const std::vector<float> &input,
+                      const std::vector<float> &target, float learningRate) {
+  auto fwd = F_vPredict(input);
+  int L = static_cast<int>(layers_.size()) - 1;
+
+  // dL/dZ_out = output - target  (MSE, activation linéaire → dérivée = 1)
+  std::vector<float> delta_out(layers_[L]);
+  for (int i = 0; i < layers_[L]; ++i)
+    delta_out[i] = fwd.activations[L][i] - target[i];
+
+  f_vBackprop(fwd, layers_, weights_, weights_, biases_, delta_out,
+              learningRate);
 }
 
 // ── Sauvegarde ───────────────────────────────────────────────────────────────
 //
 // Format binaire :
-//   [int]   nb_layers          (nombre total de couches, y compris
-//   entrée/sortie) [int]*  layers[0..N-1]     (taille de chaque couche) Pour
-//   chaque couche l = 0..N-2 :
-//     [float]* weights_[l]     (out * in floats)
-//     [float]* biases_[l]      (out floats)
+//   [int]   nb_layers
+//   [int]*  layers[0..N-1]
+//   [int]   mode  (0 = Classification, 1 = Regression)
+//   Pour chaque couche l = 0..N-2 :
+//     [float]* weights_[l]   (out * in floats)
+//     [float]* biases_[l]    (out floats)
 //
-
 void CModel::F_vSave(const std::string &filename) const {
   std::ofstream f(filename, std::ios::binary);
   if (!f)
@@ -205,6 +226,9 @@ void CModel::F_vSave(const std::string &filename) const {
   int nb = static_cast<int>(layers_.size());
   f.write(reinterpret_cast<const char *>(&nb), sizeof(int));
   f.write(reinterpret_cast<const char *>(layers_.data()), nb * sizeof(int));
+
+  int mode_int = static_cast<int>(mode_);
+  f.write(reinterpret_cast<const char *>(&mode_int), sizeof(int));
 
   for (int l = 0; l < nb - 1; ++l) {
     f.write(reinterpret_cast<const char *>(weights_[l].data()),
@@ -229,7 +253,12 @@ CModel CModelLoader::F_vLoad() {
   std::vector<int> layers(nb);
   f.read(reinterpret_cast<char *>(layers.data()), nb * sizeof(int));
 
-  CModel model(layers);
+  // Lecture du mode (absent dans les anciens fichiers → défaut Classification)
+  int mode_int = 0;
+  f.read(reinterpret_cast<char *>(&mode_int), sizeof(int));
+  OutputMode mode = static_cast<OutputMode>(mode_int);
+
+  CModel model(layers, mode);
 
   for (int l = 0; l < nb - 1; ++l) {
     f.read(reinterpret_cast<char *>(model.weights_[l].data()),
