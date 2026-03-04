@@ -1,9 +1,6 @@
 #ifndef CENTRAINEUR_HPP
 #define CENTRAINEUR_HPP
 
-#include "CModel.hpp"
-#include <fstream>
-#include <iostream>
 #include <json/json.h>
 #include <random>
 #include <string>

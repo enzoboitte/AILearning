@@ -1,7 +1,10 @@
 #include "include/CEntraineur.hpp"
+#include "include/CModel.hpp"
 #include <algorithm>
 #include <cmath>
 #include <cstdlib>
+#include <fstream>
+#include <iostream>
 #include <random>
 #include <unordered_set>
 
