@@ -11,7 +11,10 @@
 
 class CEntraineur {
 public:
-  CEntraineur(const std::string &l_sDatasetPath);
+  // layers = { inputSize, hidden1, ..., outputSize }
+  // Si layers est vide, une topologie par défaut est choisie.
+  CEntraineur(const std::string &l_sDatasetPath,
+              const std::vector<int> &layers = {});
   ~CEntraineur();
 
   void F_vLancerEntrainement();
@@ -26,6 +29,10 @@ private:
                     std::vector<float> &l_lDst);
 
   std::vector<std::pair<std::vector<float>, int>> g_lDonneesEntrainement;
+
+  // Topologie du réseau (stockée pour créer le modèle après chargement du
+  // dataset)
+  std::vector<int> g_vLayers;
 
   // Paramètres globaux
   float g_fTauxApprentissage = 0.005f;

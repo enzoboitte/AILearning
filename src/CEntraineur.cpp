@@ -5,8 +5,10 @@
 #include <random>
 #include <unordered_set>
 
-CEntraineur::CEntraineur(const std::string &l_sDatasetPath)
-    : g_genRandom(std::random_device{}()), g_distShuffle(0, 1000) {
+CEntraineur::CEntraineur(const std::string &l_sDatasetPath,
+                         const std::vector<int> &layers)
+    : g_vLayers(layers), g_genRandom(std::random_device{}()),
+      g_distShuffle(0, 1000) {
   F_vChargerDataset(l_sDatasetPath);
   g_iNbEpochs = 500; // fixe, indépendant du dataset
   g_fTauxApprentissage = 0.01f;
@@ -122,13 +124,38 @@ void CEntraineur::F_vLancerEntrainement() {
 
   int l_iInputSize = static_cast<int>(g_lDonneesEntrainement[0].first.size());
   std::cout << "Taille input: " << l_iInputSize << "\n";
-  // exit(0);
-  CModel l_cModele(128, 10, l_iInputSize);
+
+  // Compléter la topologie si l'utilisateur n'a pas précisé la taille d'entrée
+  // (le vecteur donné en argument commence souvent à la première couche cachée)
+  std::vector<int> l_vLayers = g_vLayers;
+  if (l_vLayers.empty()) {
+    // Topologie par défaut : [input, 128, 10]
+    l_vLayers = {l_iInputSize, 128, 10};
+    std::cout << "Topologie par défaut : [" << l_iInputSize << ", 128, 10]\n";
+  } else if (l_vLayers.front() != l_iInputSize) {
+    // L'utilisateur n'a pas inclus le layer d'entrée → on le préfixe
+    l_vLayers.insert(l_vLayers.begin(), l_iInputSize);
+  }
+
+  // Affichage de la topologie
+  std::cout << "Topologie réseau : [";
+  for (size_t i = 0; i < l_vLayers.size(); ++i)
+    std::cout << l_vLayers[i] << (i + 1 < l_vLayers.size() ? ", " : "]\n");
+
+  CModel l_cModele(l_vLayers);
 
   try {
     CModelLoader l_cChargeur("model.txt");
-    l_cModele = l_cChargeur.F_vLoad();
-    std::cout << "Modèle chargé, reprise de l'entraînement.\n\nDémarrage...\n";
+    CModel l_cLoaded = l_cChargeur.F_vLoad();
+    // On n'utilise le modèle chargé que si la topologie correspond
+    if (l_cLoaded.F_vGetLayers() == l_vLayers) {
+      l_cModele = l_cLoaded;
+      std::cout
+          << "Modèle chargé, reprise de l'entraînement.\n\nDémarrage...\n";
+    } else {
+      std::cout << "Topologie différente du modèle sauvegardé → nouveau "
+                   "modèle.\n\nDémarrage...\n";
+    }
   } catch (...) {
     std::cout << "Nouveau modèle initialisé.\n\nDémarrage...\n";
   }
@@ -140,12 +167,12 @@ void CEntraineur::F_vLancerEntrainement() {
     size_t l_iErreurs = 0;
     double l_dCrossEntropyLoss = 0.0;
     for (const auto &[l_lPixels, l_iVraiChiffre] : g_lDonneesEntrainement) {
-      auto [l_fPred, l_fConf, l_vZ1, l_vA1, l_vA2] =
-          l_cModele.F_vPredict(l_lPixels);
-      if (static_cast<int>(l_fPred) != l_iVraiChiffre)
+      auto fwd = l_cModele.F_vPredict(l_lPixels);
+      if (fwd.predicted != l_iVraiChiffre)
         ++l_iErreurs;
 
-      float l_fProb = std::clamp(l_vA2[l_iVraiChiffre], 1e-7f, 1.f);
+      const auto &l_vOutput = fwd.activations.back();
+      float l_fProb = std::clamp(l_vOutput[l_iVraiChiffre], 1e-7f, 1.f);
       l_dCrossEntropyLoss -= std::log(l_fProb);
 
       l_cModele.F_vTrain(l_lPixels, l_iVraiChiffre,

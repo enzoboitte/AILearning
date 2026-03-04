@@ -1,121 +1,126 @@
-import random
 import os
 import struct
 import numpy as np
 
-# --- FONCTIONS MATHÉMATIQUES STATIQUES ---
-def relu(x): return x if x > 0 else 0.0
-def exponentielle(x): return 2.718281828 ** min(x, 10)
+# ─── Fonctions mathématiques ──────────────────────────────────────────────────
+def relu(x): return max(0.0, x)
+
 def softmax(vecteur):
     val_max = max(vecteur)
-    exps = [exponentielle(v - val_max) for v in vecteur]
+    exps = [2.718281828 ** min(v - val_max, 10) for v in vecteur]
     somme = sum(exps)
     return [v / somme for v in exps]
 
-def produit_matriciel(matrice, vecteur):
+def produit_matriciel_vecteur(W_flat, out_size, in_size, vecteur):
+    """Calcule W @ v où W est stocké à plat (row-major)."""
     resultat = []
-    for ligne in matrice:
-        somme = sum(ligne[i] * vecteur[i] for i in range(len(vecteur)))
-        resultat.append(somme)
+    for i in range(out_size):
+        s = sum(W_flat[i * in_size + j] * vecteur[j] for j in range(in_size))
+        resultat.append(s)
     return resultat
 
 def addition_vecteurs(v1, v2):
-    return [v1[i] + v2[i] for i in range(len(v1))]
+    return [a + b for a, b in zip(v1, v2)]
 
-# --- CLASSE MODELE (LE CERVEAU) ---
+# ─── Classe Modele (N couches) ────────────────────────────────────────────────
 class Modele:
-    def __init__(self, nb_c1=64, nb_c2=10):
-        self.nb_c1 = nb_c1
-        self.nb_c2 = nb_c2
-        self.taille_entree = 4096
-        
-        # Initialisation aléatoire par défaut
-        self.poids_c1 = [[random.uniform(-0.1, 0.1) for _ in range(self.taille_entree)] for _ in range(self.nb_c1)] 
-        self.biais_c1 = [random.uniform(-0.1, 0.1) for _ in range(self.nb_c1)]
-        self.poids_c2 = [[random.uniform(-0.1, 0.1) for _ in range(self.nb_c1)] for _ in range(self.nb_c2)] 
-        self.biais_c2 = [random.uniform(-0.1, 0.1) for _ in range(self.nb_c2)]
+    """
+    Réseau neuronal entièrement connecté, N couches.
+    layers = [inputSize, hidden1, ..., outputSize]
+    weights[l] : liste plate float, taille = layers[l+1] * layers[l]
+    biases[l]  : liste float,       taille = layers[l+1]
+    """
+    def __init__(self, layers):
+        self.layers  = layers          # ex : [784, 128, 64, 10]
+        self.weights = []
+        self.biases  = []
+        for l in range(len(layers) - 1):
+            n_in  = layers[l]
+            n_out = layers[l + 1]
+            self.weights.append([0.0] * (n_out * n_in))
+            self.biases.append([0.0] * n_out)
 
+    # ── Forward pass ──────────────────────────────────────────────────────────
     def predire(self, image_pixels):
-        e_cachee = addition_vecteurs(produit_matriciel(self.poids_c1, image_pixels), self.biais_c1)
-        s_cachee = [relu(x) for x in e_cachee]
-        s_bruts = addition_vecteurs(produit_matriciel(self.poids_c2, s_cachee), self.biais_c2)
-        probas = softmax(s_bruts)
-        
+        """
+        Retourne :
+          chiffre_predit (int),
+          confiance (float, %),
+          activations (list[list[float]]) : toutes les activations,
+            activations[0] = entrée, activations[-1] = softmax sortie
+        """
+        activations = [list(image_pixels)]
+        L = len(self.layers) - 1
+
+        for l in range(L):
+            n_in  = self.layers[l]
+            n_out = self.layers[l + 1]
+            z = addition_vecteurs(
+                produit_matriciel_vecteur(self.weights[l], n_out, n_in, activations[l]),
+                self.biases[l]
+            )
+            if l < L - 1:
+                a = [relu(v) for v in z]   # couches cachées → ReLU
+            else:
+                a = softmax(z)             # couche de sortie → Softmax
+            activations.append(a)
+
+        probas = activations[-1]
         chiffre_predit = probas.index(max(probas))
         confiance = max(probas) * 100
-        
-        # On renvoie tout pour l'interface graphique
-        return chiffre_predit, confiance, e_cachee, s_cachee, probas
+        return chiffre_predit, confiance, activations
 
-    def entrainer(self, image_pixels, vrai_chiffre, taux_apprentissage):
-        # 1. Forward Pass interne
-        _, _, e_cachee, s_cachee, probas = self.predire(image_pixels)
+    # ── Propriétés de compatibilité ───────────────────────────────────────────
+    # (pour que test_ia.py puisse accéder facilement aux dimensions)
+    @property
+    def nb_c1(self):
+        """Taille de la première couche cachée (layers[1])."""
+        return self.layers[1] if len(self.layers) > 2 else self.layers[-1]
 
-        # 2. Erreur sortie
-        erreur_sortie = [probas[i] - (1.0 if i == vrai_chiffre else 0.0) for i in range(self.nb_c2)]
-        
-        # 3. Erreur cachée
-        erreur_cachee = [0.0] * self.nb_c1
-        for i in range(self.nb_c1):
-            somme_erreurs = sum(erreur_sortie[j] * self.poids_c2[j][i] for j in range(self.nb_c2))
-            erreur_cachee[i] = somme_erreurs * (1.0 if e_cachee[i] > 0 else 0.0)
+    @property
+    def nb_c2(self):
+        """Taille de la couche de sortie (layers[-1])."""
+        return self.layers[-1]
 
-        # 4. Maj Couche 2
-        for j in range(self.nb_c2):
-            for i in range(self.nb_c1):
-                self.poids_c2[j][i] -= taux_apprentissage * erreur_sortie[j] * s_cachee[i]
-            self.biais_c2[j] -= taux_apprentissage * erreur_sortie[j]
+    @property
+    def taille_entree(self):
+        return self.layers[0]
 
-        # 5. Maj Couche 1
-        for i in range(self.nb_c1):
-            for k in range(self.taille_entree):
-                if image_pixels[k] > 0:
-                    self.poids_c1[i][k] -= taux_apprentissage * erreur_cachee[i] * image_pixels[k]
-            self.biais_c1[i] -= taux_apprentissage * erreur_cachee[i]
 
-    def sauvegarder(self, chemin="model.txt"):
-        with open(chemin, "w") as f:
-            f.write(f"{self.nb_c1} {self.nb_c2}\n")
-            
-            valeurs_l1 = []
-            for i in range(self.nb_c1):
-                valeurs_l1.extend(self.poids_c1[i])
-                valeurs_l1.append(self.biais_c1[i])
-            f.write(" ".join(map(str, valeurs_l1)) + "\n")
-            
-            valeurs_l2 = []
-            for j in range(self.nb_c2):
-                valeurs_l2.extend(self.poids_c2[j])
-                valeurs_l2.append(self.biais_c2[j])
-            f.write(" ".join(map(str, valeurs_l2)) + "\n")
-
-# --- CLASSE CHARGEUR ---
+# ─── Classe ChargeurModele ────────────────────────────────────────────────────
 class ChargeurModele:
+    """
+    Lit le format binaire produit par CModel::F_vSave() :
+      [int]   nb_layers
+      [int]*  layers[0..nb_layers-1]
+      Pour chaque l = 0..nb_layers-2 :
+        [float]* weights[l]  (layers[l+1] * layers[l] floats)
+        [float]* biases[l]   (layers[l+1] floats)
+    """
     def __init__(self, chemin_fichier="model.txt"):
         self.chemin_fichier = chemin_fichier
 
     def charger(self):
         if not os.path.exists(self.chemin_fichier):
-            print(f"⚠️ {self.chemin_fichier} introuvable.")
-            return Modele(nb_c1=64)
+            print(f"⚠️  {self.chemin_fichier} introuvable → modèle aléatoire par défaut.")
+            return Modele([4096, 128, 10])
 
         with open(self.chemin_fichier, "rb") as f:
-            nb_c1, nb_c2, input_size = struct.unpack("iii", f.read(12))
-
-            def f_lLireFloats(n):
+            def lire_ints(n):
+                return list(struct.unpack(f"{n}i", f.read(n * 4)))
+            def lire_floats(n):
                 return list(struct.unpack(f"{n}f", f.read(n * 4)))
 
-            w1 = f_lLireFloats(nb_c1 * input_size)
-            b1 = f_lLireFloats(nb_c1)
-            w2 = f_lLireFloats(nb_c2 * nb_c1)
-            b2 = f_lLireFloats(nb_c2)
+            nb_layers = lire_ints(1)[0]
+            layers = lire_ints(nb_layers)
 
-        print(f"🧠 {nb_c1} neurones cachés, {nb_c2} sorties, input={input_size}")
+            modele = Modele(layers)
+            for l in range(nb_layers - 1):
+                n_in  = layers[l]
+                n_out = layers[l + 1]
+                modele.weights[l] = lire_floats(n_out * n_in)
+                modele.biases[l]  = lire_floats(n_out)
 
-        modele = Modele(nb_c1, nb_c2)
-        modele.taille_entree = input_size
-        modele.poids_c1 = np.array(w1).reshape(nb_c1, input_size).tolist()
-        modele.biais_c1 = list(b1)
-        modele.poids_c2 = np.array(w2).reshape(nb_c2, nb_c1).tolist()
-        modele.biais_c2 = list(b2)
+        topo = " → ".join(str(s) for s in layers)
+        print(f"🧠 Modèle chargé : {topo}")
         return modele
